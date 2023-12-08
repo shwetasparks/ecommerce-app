@@ -11,7 +11,7 @@ export const registerController = async (req, res) => {
 
     // Sub-step 1.2: Validation for required fields
     if (!name) {
-      return res.send({ error: "Name is Required" });
+      return res.send({ message: "Name is Required" });
     }
     if (!email) {
       return res.send({ message: "Email is Required" });
