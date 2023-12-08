@@ -33,7 +33,7 @@ export const registerController = async (req, res) => {
     if (existingUser) {
       return res.status(200).send({
         success: false,
-        message: "User already exists",
+        message: "Already registered, Please login",
       });
     }
 
