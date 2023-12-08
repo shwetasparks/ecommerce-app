@@ -1,0 +1,157 @@
+/* Reset and global styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f8f8; /* Light gray background */
+  color: #333; /* Dark text color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+  font-size: 14px; /* Font size for the navbar */
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #141414; /* Dark background color */
+  color: #fff; /* Light text color */
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 22px; /* Font size for the brand */
+  text-decoration: none;
+  color: #fff; /* Light text color */
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #fff; /* Light text color */
+  margin: 0 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f39c12; /* Orange on hover */
+}
+
+/* Footer styles */
+.footers {
+  background: #141414; /* Dark background color */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footers h5 {
+  margin-bottom: 10px;
+  font-size: 14px; /* Font size for headings */
+}
+
+.footers p {
+  margin: 0;
+  font-size: 14px; /* Font size for paragraphs */
+}
+
+.footers a {
+  color: #f39c12; /* Orange for links */
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footers a:hover {
+  color: #fff;
+}
+
+/* Page not found styles */
+.page-not-found {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+}
+
+.pnf-heading {
+  font-size: 5rem;
+  color: #e74c3c;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.pnf-btn,
+.go-back {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pnf-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.pnf-btn:hover,
+.go-back:hover {
+  background-color: #fff;
+  color: #e74c3c;
+}
+
+.go-back {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 20px; /* Adjusted font size for small screens */
+  }
+
+  .nav-link {
+    margin: 0 15px; /* Adjusted margin for small screens */
+  }
+
+  .pnf-btn,
+  .go-back {
+    font-size: 1.2em;
+    padding: 12px 24px; /* Adjusted padding for small screens */
+  }
+}
+
+/* Register styles */
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  flex-direction: column;
+}
+
+.register-heading {
+  font-size: 2rem;
+  margin-bottom: 1px;
+  color: #3498db;
+  font-weight: bold;
+  text-align: center;
+}
