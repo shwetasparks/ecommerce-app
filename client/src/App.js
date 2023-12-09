@@ -5,7 +5,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Privacypolicy from "./pages/Privacypolicy";
 import Pagenotfound from "./pages/Pagenotfound";
-import Register from "./components/Layout/Register";
+import Register from "./pages/Auth/Register";
+import Login from "./pages/Auth/Login";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/Privacypolicy" element={<Privacypolicy />} />
         <Route path="/*" element={<Pagenotfound />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );

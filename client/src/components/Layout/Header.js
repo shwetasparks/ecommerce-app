@@ -1,7 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../../context/auth";
 
 const Header = () => {
+  const [auth, setAuth] = useAuth();
+
   return (
     <nav
       className="navbar navbar-expand-lg"
@@ -51,32 +54,56 @@ const Header = () => {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink
-                to="/register"
-                className="nav-link"
-                style={{
-                  color: "#fff",
-                  margin: "0 15px",
-                  textDecoration: "none",
-                }}
-              >
-                Register
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/login"
-                className="nav-link"
-                style={{
-                  color: "#fff",
-                  margin: "0 15px",
-                  textDecoration: "none",
-                }}
-              >
-                Login
-              </NavLink>
-            </li>
+
+            {/* conditional redering ,if auth.user then 
+            register and login ,and if not
+            then logout */}
+            {!auth.user ? (
+              <>
+                <li className="nav-item">
+                  <NavLink
+                    to="/register"
+                    className="nav-link"
+                    style={{
+                      color: "#fff",
+                      margin: "0 15px",
+                      textDecoration: "none",
+                    }}
+                  >
+                    Register
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/login"
+                    className="nav-link"
+                    style={{
+                      color: "#fff",
+                      margin: "0 15px",
+                      textDecoration: "none",
+                    }}
+                  >
+                    Login
+                  </NavLink>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="nav-item">
+                  <NavLink
+                    to="/login"
+                    className="nav-link"
+                    style={{
+                      color: "#fff",
+                      margin: "0 15px",
+                      textDecoration: "none",
+                    }}
+                  >
+                    Logout
+                  </NavLink>
+                </li>
+              </>
+            )}
 
             <li className="nav-item">
               <NavLink

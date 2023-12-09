@@ -1,17 +1,19 @@
 /* AuthStyles.css */
 
-/* Register Page Styles */
-
+/* Shared Styles */
 .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
-  background-color: #f0f0f0; /* Light gray background */
   min-height: 70vh;
+}
+
+.form-container form {
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #ffffff, #f2f2f2);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -23,40 +25,40 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #333; /* Dark text color */
+  color: #333;
 }
 
 .form-control {
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   margin-bottom: 20px;
-  border: 1px solid #ccc; /* Border color */
-  border-radius: 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   box-sizing: border-box;
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease;
 }
 
 .form-control:focus {
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .form-text {
-  color: #666; /* Lighter text color */
+  color: #777;
 }
 
 .btn-primary {
-  background-color: #007bff; /* Primary button color */
-  color: #fff; /* Button text color */
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: #fff;
   padding: 15px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3; /* Darker color on hover */
+  background: linear-gradient(45deg, #0056b3, #003a73);
 }
 
 /* Responsive Styles */
@@ -70,7 +72,7 @@
   }
 
   .form-control {
-    padding: 10px;
+    padding: 12px;
   }
 
   .btn-primary {
