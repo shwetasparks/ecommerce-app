@@ -1,0 +1,79 @@
+/* AuthStyles.css */
+
+/* Register Page Styles */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  background-color: #f0f0f0; /* Light gray background */
+  min-height: 70vh;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-container:hover {
+  transform: scale(1.02);
+}
+
+.register-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Dark text color */
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-text {
+  color: #666; /* Lighter text color */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Primary button color */
+  color: #fff; /* Button text color */
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .form-container {
+    margin-top: 30px;
+  }
+
+  .register-heading {
+    font-size: 2rem;
+  }
+
+  .form-control {
+    padding: 10px;
+  }
+
+  .btn-primary {
+    padding: 12px 15px;
+  }
+}

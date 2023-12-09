@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import Layout from "./../components/Layout/Layout";
-import { toast } from "react-toastify";
+import Layout from "./Layout";
+import "../../styles/AuthStyles.css";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -20,18 +22,15 @@ const Register = () => {
     try {
       toast.success("Register successfully");
 
-      const res = await axios.post(
-        `${process.env.REACT_APP_API}/api/v1/auth/register`,
-        {
-          name,
-          email,
-          password,
-          phone,
-          address,
-        }
-      );
+      const res = await axios.post("/api/v1/auth/register", {
+        name,
+        email,
+        password,
+        phone,
+        address,
+      });
 
-      if (res.data.success) {
+      if (res && res.data.success) {
         toast.success(res.data.message);
         navigate("/login");
       } else {
@@ -45,18 +44,18 @@ const Register = () => {
 
   return (
     <Layout title="Register-Ecommerce App">
-      <div className="register">
-        <h1 className="register-heading">Register </h1>
-
+      <div className="form-container">
         <form
           style={{ maxWidth: "400px", margin: "auto" }}
           onSubmit={handleSubmit}
         >
+          <h2 className="register-heading">Register </h2>
+
           <div className="mb-4">
             <input
               type="text"
               className="form-control"
-              id="name"
+              value={name}
               placeholder="Enter your name "
               onChange={(e) => setName(e.target.value)}
               required

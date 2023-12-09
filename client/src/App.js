@@ -5,7 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Privacypolicy from "./pages/Privacypolicy";
 import Pagenotfound from "./pages/Pagenotfound";
-import Register from "./pages/Register";
+import Register from "./components/Layout/Register";
 
 const App = () => {
   return (
