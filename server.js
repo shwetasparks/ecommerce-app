@@ -28,6 +28,11 @@ app.get("/", (req, res) => {
   res.send({ message: "welcome to ecommerce app" });
 });
 
+//protected route
+router.get("/user-auth", requireSignIn, (req, res) => {
+  res.status(200).send({ ok: true });
+});
+
 //port
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

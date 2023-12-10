@@ -1,4 +1,6 @@
 import { useState, useContext, createContext, useEffect } from "react";
+import axios from "axios";
+
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
@@ -6,6 +8,9 @@ const AuthProvider = ({ children }) => {
     user: null,
     token: "",
   });
+
+  //default axio
+  axios.defaults.headers.common["Authorization"] = auth?.token;
 
   //to take data from localstorage and parse it
 
@@ -19,6 +24,8 @@ const AuthProvider = ({ children }) => {
         token: parseData.token,
       });
     }
+
+    //eslint-disable-next-line
   }, []);
 
   return (
